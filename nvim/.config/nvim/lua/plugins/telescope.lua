@@ -8,4 +8,7 @@ return {
 		{ "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Telescope buffers" },
 		{ "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Telescope help tags" },
 	},
+    config = function()
+        require('telescope').load_extension('fzf')
+    end
 }
