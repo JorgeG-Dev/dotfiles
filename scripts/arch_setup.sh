@@ -30,15 +30,12 @@ LANG_TOOLCHAINS=(
     cmake
     lua
     nodejs
+    npm
+    uv
 )
 
 LANG_DEV_TOOLS=(
     lua-language-server
-    stylua
-    uv
-    npm
-    ruff
-    tree-sitter-cli
 )
 
 install_packages() {
@@ -78,7 +75,15 @@ echo "Installing language dev tools..."
 install_packages "${LANG_DEV_TOOLS[@]}"
 
 echo ""
-echo "Installing rust based tools"
+echo "Installing rustup based tools"
 if command -v rustup &>/dev/null; then
     rustup component add rust-analyzer
 fi
+
+echo ""
+echo "Installing cargo based tools"
+if command -v cargo &>/dev/null; then
+    cargo install tree-sitter-cli
+    cargo install stylua
+fi
+
