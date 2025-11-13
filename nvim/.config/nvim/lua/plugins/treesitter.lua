@@ -22,6 +22,7 @@ return {
 				"sql",
 				"toml",
 				"xml",
+				"markdown_inline",
 			},
 			highlight = {
 				enable = true, -- enable highlighting
@@ -29,7 +30,8 @@ return {
 			indent = {
 				enable = true, -- optional
 			},
-			sync_install = false,
+			auto_install = true,
+			sync_install = true,
 			-- Add more modules as needed
 		})
 	end,
