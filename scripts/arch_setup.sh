@@ -30,6 +30,7 @@ LANG_TOOLCHAINS=(
     cmake
     lua
     nodejs
+    clang
 )
 
 LANG_DEV_TOOLS=(
