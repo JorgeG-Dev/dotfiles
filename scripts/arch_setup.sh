@@ -31,6 +31,7 @@ LANG_TOOLCHAINS=(
     lua
     nodejs
     clang
+    gleam
 )
 
 LANG_DEV_TOOLS=(
@@ -78,7 +79,7 @@ echo "Installing language dev tools..."
 install_packages "${LANG_DEV_TOOLS[@]}"
 
 echo ""
-echo "Installing rustup based tools"
+echo "Installing rust toolchain and lsp"
 if command -v rustup &>/dev/null; then
-    rustup component add rust-analyzer
+    rustup toolchain install stable --component rust-analyzer 
 fi

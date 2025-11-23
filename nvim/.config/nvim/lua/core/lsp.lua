@@ -3,6 +3,7 @@ vim.lsp.enable({
 	"rust-analyzer",
 	"basedpyright",
 	"clangd",
+	"gleam",
 })
 
 vim.diagnostic.config({

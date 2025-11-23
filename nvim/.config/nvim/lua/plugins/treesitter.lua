@@ -23,6 +23,7 @@ return {
 				"toml",
 				"xml",
 				"markdown_inline",
+				"gleam",
 			},
 			highlight = {
 				enable = true, -- enable highlighting
